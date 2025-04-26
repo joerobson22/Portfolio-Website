@@ -40,18 +40,6 @@ body {
 
 
 /*---------------------------- NAVBAR --------------------------------*/
-@media screen and (max-width: 960px) {
-    .navbar_menu {
-        background-color: red;
-        display: none;
-    }
-
-    .navbar_container {
-        justify-content: flex-start;
-        padding: 0 20px;
-    }
-}
-
 .navbar {
     background: var(--primary-color);
     height: 80px;
@@ -165,7 +153,7 @@ body {
     border-radius: 50%;
     transform: translate(-50%, -50%) scale(0);
     background: var(--button-color-highlighted);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.35s ease-in-out;
     z-index: 0;
 }
 
@@ -262,7 +250,6 @@ body {
 }
 
 .about_container {
-    border-radius: 20px;
     background-color: var(--section-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -285,6 +272,10 @@ body {
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+}
+
+#about_hi {
+    font-weight: 600;
 }
 
 .about_content p {
@@ -326,7 +317,6 @@ body {
 }
 
 .projects_container {
-    border-radius: 20px;
     background-color: var(--section-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -377,6 +367,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 120px;
     max-width: 1300px;
+    width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
     border-radius: 20px;
@@ -443,7 +434,6 @@ body {
 }
 
 .experience_background {
-    border-radius: 20px;
     padding: 0 50px;
     background-color: var(--section-background);
     align-items: center;
@@ -479,9 +469,11 @@ body {
 }
 
 .experience_heading_row {
+    padding-left: 0;
     display: flex;
     align-items: center;
     gap: 20px;
+    padding: 20px 0px;
     margin-bottom: 1rem;
 }
 
@@ -598,4 +590,117 @@ body {
 
 .contact_content p {
     font-size: 0.9rem;
+}
+
+
+/*---------------- MOBILE ---------------*/
+
+@media screen and (max-width: 1300px) {
+    .navbar {
+        /*background: red;*/
+    }
+
+    /* Reduce padding between projects */
+    .all_projects {
+        padding: 20px 10px;
+        gap: 100px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .navbar {
+        /*background: orange;*/
+    }
+
+    /* Condense the skills and technical section */
+    .technical_content {
+        gap: 0px;
+    }
+
+    .skills_content {
+        gap: 0px;
+    }
+
+    /* Make the about me smaller */
+    .about_content p {
+        font-size: 1rem;
+    }
+
+    #about_img {
+        width: 50%;
+    }
+
+    /* Reduce gaps between projects again */
+    .all_projects {
+        max-width: 1100px;
+        gap: 50px;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    /* Make them smaller too */
+    .project_text h3 {
+        font-size: 1rem;
+    }
+
+    .project_text p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .navbar {
+        /*background: yellow;*/
+    }
+
+    /* Make the skills text smaller */
+    .technical_content p {
+        font-size: 1rem;
+    }
+
+    .skills_content p {
+        font-size: 0.8rem;
+    }
+
+    /* Reduce gaps between projects again */
+    .all_projects {
+        max-width: 850px;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navbar {
+        /*background: green;*/
+    }
+
+    /* Get rid of the links */
+    .navbar_links {
+        font-size: 0;
+    }
+
+    /* Arrange the text above the pictures */
+    .about_container {
+        display: inline-block;
+    }
+
+    /* Reduce gaps between projects again */
+    .all_projects {
+        display: inline-block;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    /* Make the text usual size */
+    .project_text h3 {
+        font-size: 1.3rem;
+    }
+
+    .project_text p {
+        font-size: 0.95rem;
+    }
+
+    .project_item {
+        margin: 10px;
+    }
 }
