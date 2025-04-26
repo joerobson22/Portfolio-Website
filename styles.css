@@ -44,13 +44,8 @@ body {
     background: var(--primary-color);
     height: 80px;
     display: flex;
-
     justify-content: center;
-    /* centers the container horizontally in the navbar */
-
     align-items: center;
-    /* centers it vertically */
-
     font-size: 1.2rem;
     position: sticky;
     top: 0;
@@ -84,20 +79,6 @@ body {
 
 #navbar_pfp:hover {
     transform: scale(1.05);
-}
-
-#navbar_uni_logo {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    margin-top: 10px;
-    margin-left: 20px;
-
-    transition: transform 0.3s ease-in-out;
-}
-
-#navbar_uni_logo:hover {
-    transform: scale(1.075);
 }
 
 .navbar_menu {
@@ -188,7 +169,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1300px;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 .technical_content {
@@ -221,7 +202,7 @@ body {
     margin: 0 auto;
     width: 100%;
     max-width: 1300px;
-    padding: 0 50px;
+    padding: 0 10px;
 }
 
 .skills_content {
@@ -250,6 +231,7 @@ body {
 }
 
 .about_container {
+    border-radius: 20px;
     background-color: var(--section-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -276,10 +258,12 @@ body {
 
 #about_hi {
     font-weight: 600;
+    font-size: 1.5rem;
 }
 
 .about_content p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 1.3;
     color: var(--body-colour);
 }
 
@@ -317,6 +301,7 @@ body {
 }
 
 .projects_container {
+    border-radius: 20px;
     background-color: var(--section-background);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -435,6 +420,7 @@ body {
 
 .experience_background {
     padding: 0 50px;
+    border-radius: 20px;
     background-color: var(--section-background);
     align-items: center;
     justify-self: center;
@@ -525,8 +511,8 @@ body {
 .experience_example_text {
     margin-top: -50px;
     flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.25rem;
+    line-height: 1.3;
     color: var(--body-colour);
 }
 
@@ -646,6 +632,10 @@ body {
     .project_text p {
         font-size: 0.8rem;
     }
+
+    .experience_example_text p {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -702,5 +692,78 @@ body {
 
     .project_item {
         margin: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        /*background: blue;*/
+    }
+
+    .navbar_container {
+        justify-content: space-between;
+    }
+
+    #navbar_pfp {
+        width: 75px;
+        height: 75px;
+        margin-left: 40px;
+    }
+
+    .more_button_img {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* Condense the skills and technical section */
+    .technical_content p {
+        font-size: 0.6rem;
+    }
+
+    .skills_content p {
+        font-size: 0.5rem;
+    }
+
+    /* Size each project item correctly */
+    .project_item {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .project_text h3 {
+        font-size: 0.8rem;
+    }
+
+    .project_text p {
+        font-size: 0.7rem;
+    }
+
+    /* Experience section, just reduce the size of everything, get rid of pictures, layout in flex column */
+    .experience_container {
+        padding: 5px 5px;
+    }
+
+    .experience_example_content {
+        flex-direction: column;
+    }
+
+    #experience_img {
+        display: none;
+    }
+
+    .experience_example_text {
+        padding: 0;
+        margin: 0;
+        line-height: 1.3;
+    }
+
+    .experience_example_text h2 {
+        font-size: 1rem;
+    }
+
+    .experience_example_text p {
+        font-size: 0.75rem;
     }
 }
