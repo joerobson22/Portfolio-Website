@@ -695,7 +695,7 @@ body {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 550px) {
     .navbar {
         /*background: blue;*/
     }
@@ -716,28 +716,34 @@ body {
     }
 
 
-    /* Condense the skills and technical section */
+    /* Condense the skills and technical section
     .technical_content p {
         font-size: 0.6rem;
     }
 
     .skills_content p {
         font-size: 0.5rem;
+    }*/
+
+    /* Size each project item correctly, move them more central */
+    .projects_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Size each project item correctly */
+    .all_projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
     .project_item {
         width: 90%;
         max-width: 300px;
         margin: 10px 0;
-    }
-
-    .project_text h3 {
-        font-size: 0.8rem;
-    }
-
-    .project_text p {
-        font-size: 0.7rem;
     }
 
     /* Experience section, just reduce the size of everything, get rid of pictures, layout in flex column */
